@@ -1,6 +1,6 @@
 import React, {FunctionComponent} from 'react';
 import {Link} from "react-router-dom";
-import {useFishesStore} from "~/pages/urlHashStorage/_storage";
+import {useFishesStore} from "~/pages/urlHashStorage/_storage/fishes";
 
 interface OwnProps {
 }
