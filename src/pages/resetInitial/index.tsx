@@ -37,6 +37,7 @@ const ResetInitialPage: FunctionComponent<Props> = (props) => {
                     if (salmonInputRef.current && salmonInputRef.current.value) {
                         addSalmon(parseInt(salmonInputRef.current.value))
                         salmonInputRef.current.value = ""
+                        salmonInputRef.current.focus()
                     }
                 }}>Add Salmon
                 </button>
@@ -48,6 +49,7 @@ const ResetInitialPage: FunctionComponent<Props> = (props) => {
                     if (tunaInputRef.current && tunaInputRef.current.value) {
                         addTuna(parseInt(tunaInputRef.current.value))
                         tunaInputRef.current.value = ""
+                        tunaInputRef.current.focus()
                     }
                 }}>Add Tuna
                 </button>

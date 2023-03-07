@@ -10,7 +10,7 @@ type Props = OwnProps;
 const PersistPage: FunctionComponent<Props> = (props) => {
     const inputRef = createRef<HTMLInputElement>()
     const fruits = useFruitsStore((state) => state.fruits)
-    const {addFruit} = useFruitsStore((state) => state.actions)
+    const addAFruit = useFruitsStore((state) => state.addAFruit)
 
     return (
         <div>
@@ -30,8 +30,9 @@ const PersistPage: FunctionComponent<Props> = (props) => {
                     {" "}
                     <button onClick={() => {
                         if (inputRef.current && inputRef.current.value) {
-                            addFruit(inputRef.current.value)
+                            addAFruit(inputRef.current.value)
                             inputRef.current.value = ""
+                            inputRef.current.focus();
                         }
                     }}>Add Fruit
                     </button>
